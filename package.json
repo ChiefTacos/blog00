@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy": "gh-pages -b main -d build"
+    "deploy": "gh-pages -b main -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
