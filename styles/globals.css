@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantata+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* > *{
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.input-text {
+  @apply mt-1 block w-60 px-3 py-2 bg-white border border-slate-300 rounded-full text-sm shadow-sm placeholder-slate-500;
+  @apply focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500;
+}
+
+.loader{
+  @apply border-gray-200 rounded-full border-4 ease-linear h-10 w-10;
+  border-top-color: #363ce0;
+  animation: spinner 1.2s linear infinite;
+}
+
+@keyframes spinner{
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.latestP {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  max-width: 100ch;
+}
+.headerFo {
+  background-color: white;
+  animation: FadeIn 0.75s ease-in-out forwards;
+  border-bottom: 0.25rem groove thin black;
+  color: black;
+}
+
+@keyframes FadeIn {
+  from{
+    background-color: #ffffff;
+    border-bottom: 1rem dashed black;
+    
+  }
+  to {
+    background-color: #ffffff;
+    border-bottom: 0.25rem solid;
+  }
+}
+.booty {
+  font-family: 'Cantata One', serif;
+}
+.fireButton:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.globeButton{
+  transition:all 1s ease-in-out;
+}
+.globeButton:hover{
+  animation: blueGlobe 0.4s;
+}
+.heartButton{
+  transition: all 1s ease-in-out;
+}
+.heartButton:hover{
+  animation: redHeart 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes redHeart{
+  0%{
+    transform:scale(1);
+  }
+  33%{
+    transform:scale(1.4);
+  }
+  66%{
+    transform:scale(0.8);
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+@keyframes blueGlobe{
+  0%{
+    transform:scale(1);
+    transform: skew(45deg, 15deg);
+    
+  }
+  25%{
+    transform:scale(1.1);
+    transform: skew(15deg, 45deg);
+  }
+  50%{
+    transform:scale(1.2);
+    transform: skew(-45deg, -15deg);
+  }
+  75%{
+    transform:scale(1.1);
+    transform: skew(-15deg, -45deg);
+  }
+  100%{
+    transform:scale(1);
+    transform: skew(0deg, -5deg);
+  }
+
+}
